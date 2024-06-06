@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="03/15/2024 07:32:56" ReportInfo.Modified="03/15/2024 07:32:56" ReportInfo.CreatorVersion="2021.3.30.0">
+  <Dictionary>
+    <BusinessObjectDataSource Name="GoiThau" ReferenceName="GoiThauRef" DataType="System.Int32" Enabled="true">
+      <Column Name="MA" DataType="System.String"/>
+      <Column Name="TEN" DataType="System.String"/>
+      <Column Name="TEN_KHLCNT" DataType="System.String"/>
+      <Column Name="USERNAME" DataType="System.String"/>
+      <Column Name="FULLNAME" DataType="System.String"/>
+    </BusinessObjectDataSource>
+    <BusinessObjectDataSource Name="MoiThau" ReferenceName="MoiThauRef" DataType="System.Int32" Enabled="true">
+      <Column Name="STT" DataType="System.String"/>
+      <Column Name="MAPL" DataType="System.String"/>
+      <Column Name="TENPL" DataType="System.String"/>
+      <Column Name="DVT" DataType="System.String"/>
+      <Column Name="QUYCACH" DataType="System.String"/>
+      <Column Name="KHOILUONG" DataType="System.Int32"/>
+      <Column Name="DONGIA" DataType="System.Int32"/>
+      <Column Name="YEUCAU" DataType="System.String"/>
+    </BusinessObjectDataSource>
+    <BusinessObjectDataSource Name="DuThau" ReferenceName="DuThauRef" DataType="System.Int32" Enabled="true">
+      <Column Name="STT" DataType="System.String"/>
+      <Column Name="MANHATHAU" DataType="System.String"/>
+      <Column Name="TENNHATHAU" DataType="System.String"/>
+      <Column Name="STTPL" DataType="System.String"/>
+      <Column Name="MAPL" DataType="System.String"/>
+      <Column Name="TENDUTHAU" DataType="System.String"/>
+      <Column Name="SOLUUHANH" DataType="System.String"/>
+      <Column Name="PHANLOAI" DataType="System.String"/>
+      <Column Name="HANGSX" DataType="System.String"/>
+      <Column Name="NUOCSX" DataType="System.String"/>
+      <Column Name="CHUSOHUU" DataType="System.String"/>
+      <Column Name="DVT" DataType="System.String"/>
+      <Column Name="QUYCACH" DataType="System.String"/>
+      <Column Name="SOLUONG" DataType="System.Int32"/>
+      <Column Name="DONGIA" DataType="System.Int32"/>
+      <Column Name="MAVTYT" DataType="System.String"/>
+      <Column Name="CHUNGLOAI" DataType="System.String"/>
+      <Column Name="KETLUAN" DataType="System.String"/>
+      <Column Name="GHICHU" DataType="System.String"/>
+    </BusinessObjectDataSource>
+    <BusinessObjectDataSource Name="DanhGiaChiTiet" ReferenceName="DanhGiaChiTietRef" DataType="System.Int32" Enabled="true">
+      <Column Name="IDNOIDUNG" DataType="System.String"/>
+      <Column Name="NOIDUNG" DataType="System.String"/>
+      <Column Name="DAT" DataType="System.String"/>
+      <Column Name="CHAPNHAN" DataType="System.String"/>
+      <Column Name="KHONGDAT" DataType="System.String"/>
+      <Column Name="NHANXET" DataType="System.String"/>
+      <Column Name="GHICHU" DataType="System.String"/>
+    </BusinessObjectDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1" RawPaperSize="9" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="113.4" CanGrow="true" CanBreak="true">
+      <TextObject Name="Text1" Top="37.8" Width="718.2" Height="18.9" Text="BẢNG ĐÁNH GIÁ KỸ THUẬT" HorzAlign="Center" Font="Times New Roman, 12pt, style=Bold"/>
+      <TextObject Name="Text2" Width="302.4" Height="28.35" Text="Sở y tế TP.HCM&#13;&#13;&#13;&#13;&#10;BỆNH VIỆN NHÂN DÂN 115" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text3" Left="415.8" Width="302.4" Height="28.35" Text="Mẫu số 3B" HorzAlign="Right" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text4" Top="66.15" Width="718.2" Height="47.25" CanGrow="true" GrowToBottom="true" Text="(Sử dụng tiêu chí đánh giá &quot;đạt&quot;, &quot;không đạt&quot;)&#13;&#13;&#13;&#13;&#10;Tên gói thầu: [GoiThau.TEN]&#13;&#13;&#13;&#13;&#10;Mã TBMT: [GoiThau.MA]&#13;&#13;&#13;&#13;&#10;Tên dự toán: [GoiThau.TEN_KHLCNT]" HorzAlign="Center" Font="Times New Roman, 10pt"/>
+    </ReportTitleBand>
+    <DataBand Name="Data1" Width="718.2" Height="132.3" CanGrow="true" DataSource="MoiThau">
+      <TextObject Name="Text5" Top="9.45" Width="718.2" Height="18.9" Text="THÔNG TIN SẢN PHẨM MỜI THẦU" Font="Times New Roman, 10pt, style=Bold"/>
+      <TextObject Name="Text7" Top="56.7" Width="349.65" Height="18.9" Text="Tên phần (lô): [MoiThau.TENPL]" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text22" Top="113.4" Width="718.2" Height="18.9" CanGrow="true" GrowToBottom="true" Text="Yêu cầu tính năng thông số kỹ thuật: [MoiThau.YEUCAU]" HorzAlign="Justify" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text32" Top="75.6" Width="349.65" Height="18.9" Text="Đơn vị tính: [MoiThau.DVT]" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text33" Top="94.5" Width="349.65" Height="18.9" Text="Khối lượng: [ToInt32([MoiThau.KHOILUONG])]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="," Format.GroupSeparator="." Format.NegativePattern="1" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text34" Left="359.1" Top="75.6" Width="359.1" Height="18.9" Text="Quy cách: [MoiThau.QUYCACH]" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text35" Left="359.1" Top="94.5" Width="359.1" Height="18.9" Text="Đơn giá: [ToInt32([MoiThau.DONGIA])]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="," Format.GroupSeparator="." Format.NegativePattern="1" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text45" Top="37.8" Width="349.65" Height="18.9" Text="Mã phần lô: [MoiThau.MAPL]" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text46" Left="359.1" Top="37.8" Width="359.1" Height="18.9" Text="STT phần (lô): &lt;b&gt;[MoiThau.STT]&lt;/b&gt;" Font="Times New Roman, 10pt" TextRenderType="HtmlTags"/>
+    </DataBand>
+    <DataBand Name="Data2" Width="718.2" Height="245.7" CanGrow="true" CanBreak="true" DataSource="DuThau">
+      <TextObject Name="Text25" Top="9.45" Width="718.2" Height="18.9" Text="THÔNG TIN SẢN PHẨM DỰ THẦU" Font="Times New Roman, 10pt, style=Bold"/>
+      <TextObject Name="Text28" Top="75.6" Width="718.2" Height="18.9" CanGrow="true" GrowToBottom="true" Text="Tên dự thầu: [DuThau.TENDUTHAU]" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text29" Top="56.7" Width="718.2" Height="18.9" CanGrow="true" GrowToBottom="true" Text="Tên nhà thầu: [DuThau.TENNHATHAU]" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text30" Top="94.5" Width="718.2" Height="18.9" CanGrow="true" GrowToBottom="true" Text="Số thứ tự phần lô: [DuThau.STTPL]; Mã phần lô: [DuThau.MAPL]" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text36" Top="37.8" Width="349.65" Height="18.9" CanGrow="true" GrowToBottom="true" Text="Mã định danh: [DuThau.MANHATHAU]" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text37" Top="113.4" Width="349.65" Height="18.9" CanGrow="true" GrowToBottom="true" Text="Số lưu hành hoặc số GPNK: [DuThau.SOLUUHANH]" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text38" Left="359.1" Top="113.4" Width="359.1" Height="18.9" CanGrow="true" GrowToBottom="true" Text="Phân loại: [DuThau.PHANLOAI]" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text39" Top="132.3" Width="349.65" Height="18.9" CanGrow="true" GrowToBottom="true" Text="Hãng sản xuất: [DuThau.HANGSX]" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text40" Left="359.1" Top="132.3" Width="359.1" Height="18.9" CanGrow="true" GrowToBottom="true" Text="Nước sản xuất: [DuThau.NUOCSX]" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text47" Left="359.1" Top="37.8" Width="359.1" Height="18.9" CanGrow="true" GrowToBottom="true" Text="Số thứ tự nhà thầu: &lt;b&gt;[DuThau.STT]&lt;/b&gt;" Font="Times New Roman, 10pt" TextRenderType="HtmlTags"/>
+      <TextObject Name="Text41" Top="151.2" Width="349.65" Height="18.9" CanGrow="true" GrowToBottom="true" Text="Hãng nước chủ sở hữu: [DuThau.CHUSOHUU]" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text42" Left="359.1" Top="151.2" Width="359.1" Height="18.9" CanGrow="true" GrowToBottom="true" Text="Đơn vị tính: [DuThau.DVT]" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text43" Top="170.1" Width="349.65" Height="18.9" CanGrow="true" GrowToBottom="true" Text="Quy cách: [DuThau.QUYCACH]" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text44" Left="359.1" Top="170.1" Width="359.1" Height="18.9" CanGrow="true" GrowToBottom="true" Text="Số lượng: [ToInt32([DuThau.SOLUONG])]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="," Format.GroupSeparator="." Format.NegativePattern="1" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text31" Top="207.9" Width="718.2" Height="37.8" CanGrow="true" Text="Chủng loại (model) hoặc mã sản phẩm:&#13;&#13;&#13;&#13;&#10;[DuThau.CHUNGLOAI]&#13;&#13;&#13;&#13;&#10;" HorzAlign="Justify" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text58" Top="189" Width="718.2" Height="18.9" CanGrow="true" GrowToBottom="true" Text="Mã VTYT: [DuThau.MAVTYT]" Font="Times New Roman, 10pt"/>
+    </DataBand>
+    <DataBand Name="Data3" Width="718.2" Height="18.9" CanGrow="true" DataSource="DanhGiaChiTiet">
+      <TextObject Name="Text10" Left="283.5" Width="47.25" Height="18.9" Anchor="Top, Bottom, Left, Right" Border.Lines="All" Border.Width="0.25" CanGrow="true" CanBreak="false" Text="[DanhGiaChiTiet.DAT]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text11" Left="330.75" Width="75.6" Height="18.9" Anchor="Top, Bottom, Left, Right" Border.Lines="All" Border.Width="0.25" CanGrow="true" CanBreak="false" Text="[DanhGiaChiTiet.CHAPNHAN]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text12" Left="406.35" Width="47.25" Height="18.9" Anchor="Top, Bottom, Left, Right" Border.Lines="All" Border.Width="0.25" CanGrow="true" CanBreak="false" Text="[DanhGiaChiTiet.KHONGDAT]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text13" Left="453.6" Width="160.65" Height="18.9" Anchor="Top, Bottom, Left, Right" Border.Lines="All" Border.Width="0.25" CanGrow="true" GrowToBottom="true" CanBreak="false" Text="[DanhGiaChiTiet.NHANXET]" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text14" Left="614.25" Width="103.95" Height="18.9" Anchor="Top, Bottom, Left, Right" Border.Lines="All" Border.Width="0.25" CanGrow="true" GrowToBottom="true" CanBreak="false" Text="[DanhGiaChiTiet.GHICHU]" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text8" Width="37.8" Height="18.9" Anchor="Top, Bottom, Left, Right" Border.Lines="All" Border.Width="0.25" Text="[DanhGiaChiTiet.IDNOIDUNG]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text9" Left="37.8" Width="245.7" Height="18.9" Anchor="Top, Bottom, Left, Right" Border.Lines="All" Border.Width="0.25" CanGrow="true" GrowToBottom="true" CanBreak="false" Text="[DanhGiaChiTiet.NOIDUNG]" Font="Times New Roman, 10pt"/>
+      <DataHeaderBand Name="DataHeader1" Width="718.2" Height="58.55" CanGrow="true" KeepWithData="true" RepeatOnEveryPage="true">
+        <TextObject Name="Text17" Left="283.5" Top="30.19" Width="47.25" Height="28.35" Anchor="Top, Bottom, Left, Right" Border.Lines="All" Border.Width="0.25" CanGrow="true" GrowToBottom="true" Text="Đạt" HorzAlign="Center" Font="Times New Roman, 10pt"/>
+        <TextObject Name="Text18" Left="330.75" Top="30.19" Width="75.6" Height="28.35" Anchor="Top, Bottom, Left, Right" Border.Lines="All" Border.Width="0.25" CanGrow="true" GrowToBottom="true" Text="Chấp nhận được" HorzAlign="Center" Font="Times New Roman, 10pt"/>
+        <TextObject Name="Text19" Left="406.35" Top="30.19" Width="47.25" Height="28.35" Anchor="Top, Bottom, Left, Right" Border.Lines="All" Border.Width="0.25" CanGrow="true" GrowToBottom="true" Text="Không đạt" HorzAlign="Center" Font="Times New Roman, 10pt"/>
+        <TextObject Name="Text15" Top="11.3" Width="37.8" Height="47.25" Anchor="Top, Bottom, Left, Right" Border.Lines="All" Border.Width="0.25" CanGrow="true" GrowToBottom="true" Text="STT" VertAlign="Center" Font="Times New Roman, 10pt"/>
+        <TextObject Name="Text20" Left="453.6" Top="11.3" Width="160.65" Height="47.25" Anchor="Top, Bottom, Left, Right" Border.Lines="All" Border.Width="0.25" CanGrow="true" GrowToBottom="true" Text="Nhận xét" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+        <TextObject Name="Text21" Left="614.25" Top="11.3" Width="103.95" Height="47.25" Anchor="Top, Bottom, Left, Right" Border.Lines="All" Border.Width="0.25" CanGrow="true" GrowToBottom="true" Text="Ghi chú" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+        <TextObject Name="Text26" Left="283.5" Top="11.3" Width="170.1" Height="18.9" Anchor="Top, Bottom, Left, Right" Border.Lines="All" Border.Width="0.25" CanGrow="true" GrowToBottom="true" Text="Kết quả đánh giá" HorzAlign="Center" Font="Times New Roman, 10pt"/>
+        <TextObject Name="Text16" Left="37.8" Top="11.3" Width="245.7" Height="47.25" Anchor="Top, Bottom, Left, Right" Border.Lines="All" Border.Width="0.25" CanGrow="true" GrowToBottom="true" Text="Nội dung đánh giá" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      </DataHeaderBand>
+      <DataFooterBand Name="DataFooter1" Width="718.2" Height="47.25" CanGrow="true" CanBreak="true">
+        <TextObject Name="Text56" Top="9.45" Width="718.2" Height="37.8" CanGrow="true" GrowToBottom="true" Text="Ghi chú: [DuThau.GHICHU]&#13;&#13;&#13;&#13;&#10;Kết luận: &lt;b&gt;[DuThau.KETLUAN]&lt;/b&gt;" HorzAlign="Justify" Font="Times New Roman, 10pt" TextRenderType="HtmlTags"/>
+      </DataFooterBand>
+    </DataBand>
+    <ReportSummaryBand Name="ReportSummary1" Width="718.2" Height="160.65">
+      <TextObject Name="Text27" Left="529.2" Top="9.45" Width="189" Height="37.8" Text="&lt;b&gt;Người đánh giá&lt;/b&gt;&#13;&#13;&#13;&#13;&#10;(Ký, ghi rõ họ tên)" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 12pt" TextRenderType="HtmlTags"/>
+      <TextObject Name="Text57" Left="529.2" Top="141.75" Width="189" Height="18.9" Text="[GoiThau.FULLNAME]" HorzAlign="Center" Font="Times New Roman, 10pt, style=Bold"/>
+    </ReportSummaryBand>
+    <PageFooterBand Name="PageFooter1" Width="718.2" Height="18.9">
+      <TextObject Name="Text23" Width="311.85" Height="18.9" Text="[Date]" Format="Date" Format.Format="dd/MM/yyyy HH:mm" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text24" Left="623.7" Width="94.5" Height="18.9" Text="[Page#]" HorzAlign="Right" Font="Times New Roman, 10pt"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>
+

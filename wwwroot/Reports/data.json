@@ -1,0 +1,75 @@
+﻿{
+    "GoiThau": [
+        {
+            "MA": null,
+            "TEN": null,
+            "TEN_KHLCNT": null,
+            "USERNAME": null,
+            "FULLNAME": null
+        }
+    ],
+    "MoiThau": [
+        {
+            "STT": null,
+            "MAPL": null,
+            "TENPL": null,
+            "DVT": null,
+            "QUYCACH": null,
+            "KHOILUONG": null,
+            "DONGIA": null,
+            "YEUCAU": null
+        }
+    ],
+    "DuThau": [
+        {
+            "STT": null,
+            "MANHATHAU": null,
+            "TENNHATHAU": null,
+            "STTPL": null,
+            "MAPL": null,
+            "TENDUTHAU": null,
+            "SOLUUHANH": null,
+            "PHANLOAI": null,
+            "HANGSX": null,
+            "NUOCSX": null,
+            "CHUSOHUU": null,
+            "DVT": null,
+            "QUYCACH": null,
+            "SOLUONG": null,
+            "DONGIA": null,
+            "MAVTYT": null,
+            "CHUNGLOAI": null,
+            "KETLUAN": null,
+            "GHICHU": null
+        }
+    ],
+    "DangGiaChiTiet": [
+        {
+            "IDNOIDUNG": null,
+            "NOIDUNG": null,
+            "DAT": null,
+            "CHAPNHAN": null,
+            "KHONGDAT": null,
+            "NHANXET": null,
+            "GHICHU": null
+        },
+        {
+            "IDNOIDUNG": null,
+            "NOIDUNG": null,
+            "DAT": null,
+            "CHAPNHAN": null,
+            "KHONGDAT": null,
+            "NHANXET": null,
+            "GHICHU": null
+        },
+        {
+            "IDNOIDUNG": null,
+            "NOIDUNG": null,
+            "DAT": null,
+            "CHAPNHAN": null,
+            "KHONGDAT": null,
+            "NHANXET": null,
+            "GHICHU": null
+        }
+    ]
+}
